@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <featured_tab>
+            <label>Product Featured</label>
+            <sort_order>10</sort_order>
+        </featured_tab>
+    </tabs>
+    <sections>
+        <featured_config>
+            <label>Setting</label>
+            <tab>featured_tab</tab>
+            <front_type>text</front_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <!-- General Settings-->
+                <general translate="label">
+                    <label>General Settings</label>
+                    <front_type>text</front_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <header_title translate="label">
+                            <label>Slide Show Title:</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </header_title>
+                        <is_enabled translate="label">
+                            <label>Enabled:</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </is_enabled>
+                        <number_product translate="label">
+                            <label>Number Product:</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </number_product>
+                    </fields>
+                </general>
+                <!-- -->
+                <cms translate="label">
+                    <label>CMS Page Settings</label>
+                    <front_type>text</front_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <cms_page translate="label">
+                            <label>CMS Page:</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>featured/system_config_source_dropdown_cmspage</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cms_page>
+                        <cms_column translate="label">
+                            <label>Column:</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>featured/system_config_source_dropdown_columns</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cms_column>
+                        <!--<cms_position translate="label">-->
+                            <!--<label>Position:</label>-->
+                            <!--<frontend_type>select</frontend_type>-->
+                            <!--<source_model>featured/system_config_source_dropdown_position</source_model>-->
+                            <!--<sort_order>4</sort_order>-->
+                            <!--<show_in_default>1</show_in_default>-->
+                            <!--<show_in_website>1</show_in_website>-->
+                            <!--<show_in_store>1</show_in_store>-->
+                        <!--</cms_position>-->
+                    </fields>
+                </cms>
+                <!-- -->
+                <catalog translate="label">
+                    <label>Category Settings</label>
+                    <front_type>text</front_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <categories translate="label">
+                            <label>Categories:</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>featured/system_config_source_dropdown_categories</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </categories>
+                        <category_column translate="label">
+                            <label>Column:</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>featured/system_config_source_dropdown_columns</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </category_column>
+                    </fields>
+                </catalog>
+                <!-- -->
+                <action translate="label">
+                    <label>Actions</label>
+                    <front_type>text</front_type>
+                    <sort_order>40</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <visible_name translate="label">
+                            <label>Display Name:</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </visible_name>
+                        <visible_price translate="label">
+                            <label>Display Price:</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </visible_price>
+                    </fields>
+                </action>
+                <!-- -->
+                <sort translate="label">
+                    <label>Sort</label>
+                    <front_type>text</front_type>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <sort_by translate="label">
+                            <label>Sort By:</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>featured/system_config_source_dropdown_sort</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sort_by>
+                    </fields>
+                </sort>
+                <!-- -->
+                <slider translate="label">
+                    <label>Slider Effects</label>
+                    <front_type>text</front_type>
+                    <sort_order>60</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <number_item translate="label">
+                            <label>Number items per silde:</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </number_item>
+                        <effect translate="label">
+                            <label>Effect:</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>featured/system_config_source_dropdown_effect</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </effect>
+                    </fields>
+                </slider>
+            </groups>
+        </featured_config>
+    </sections>
+</config>

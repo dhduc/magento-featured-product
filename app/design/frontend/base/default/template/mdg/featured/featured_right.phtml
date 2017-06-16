@@ -1,0 +1,34 @@
+<?php if(($this->checkCmsPage() && $this->getCmsColumn() == 3)
+    || (($this->checkCategory()) && ($this->getCategoryColumn() == 3) ) ): ?>
+    <script>
+        <?php echo $this->setNumberItem(); ?>
+    </script>
+    <script type="text/javascript" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS); ?>lib/jcarousel.responsive.js"></script>
+    <script>
+        <?php echo $this->getEffect(); ?>
+    </script>
+    <h2><?php echo $this->getTitle(); ?></h2>
+    <div class="jcarousel-wrapper">
+        <div class="jcarousel">
+            <ul>
+                <?php $products = $this->getFeatured(); foreach ($products as $product) { ?>
+                    <li>
+                        <a href="<?php echo Mage::getBaseUrl().'/'.$product->getUrl_path(); ?>">
+                            <img src="<?php echo Mage::helper('catalog/image')->init($product, 'image'); ?>"
+                                 alt="<?php echo $product->getName(); ?>">
+                        </a>
+                        <p id="featured-title">
+                            <a href="<?php echo Mage::getBaseUrl().'/'.$product->getUrl_path(); ?>">
+                                <?php echo $product->getName(); ?>
+                            </a>
+                        </p>
+                    </li>
+                <?php } ?>
+            </ul>
+        </div>
+
+        <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+        <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+        <p class="jcarousel-pagination"></p>
+    </div>
+<?php endif; ?>

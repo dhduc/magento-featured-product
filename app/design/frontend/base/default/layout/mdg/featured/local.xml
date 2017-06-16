@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>css/jcarousel/jcarousel.responsive.css</stylesheet>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/jcarousel/style.css</stylesheet>
+            </action>
+            <action method="addJs">
+                <script>lib/jcarousel/jquery.jcarousel.min.js</script>
+            </action>
+            <action method="addJs">
+                <script>lib/jcarousel/jcarousel.responsive.js</script>
+            </action>
+        </reference>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/2columns-right.phtml</template>
+            </action>
+        </reference>
+    </default>
+    <cms_page>
+        <reference name="left">
+            <block type="featured/featured" before="-"
+                   name="product.featured.left"
+                   template="mdg/featured/featured_left.phtml" />
+        </reference>
+        <reference name="content">
+            <block type="featured/featured" before="-"
+                   name="product.featured.content"
+                   template="mdg/featured/featured_content.phtml" />
+        </reference>
+        <reference name="right">
+            <block type="featured/featured" before="-"
+                   name="product.featured.right"
+                   template="mdg/featured/featured_right.phtml" />
+        </reference>
+    </cms_page>
+    <catalog_category_default>
+        <reference name="left">
+            <block type="featured/featured" before="-"
+                   name="product.featured.left"
+                   template="mdg/featured/featured_left.phtml" />
+        </reference>
+        <reference name="content">
+            <block type="featured/featured" before="-"
+                   name="product.featured.content"
+                   template="mdg/featured/featured_content.phtml" />
+        </reference>
+        <reference name="right">
+            <block type="featured/featured" before="-"
+                   name="product.featured.right"
+                   template="mdg/featured/featured_right.phtml" />
+        </reference>
+    </catalog_category_default>
+</layout>

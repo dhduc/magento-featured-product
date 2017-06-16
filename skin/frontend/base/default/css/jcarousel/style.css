@@ -1,0 +1,15 @@
+.jcarousel ul {
+    list-style: none !important;
+}
+.jcarousel ul li {
+    margin: 0 !important;
+}
+.featured-item {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+#featured-title {
+    font-size: 1.2em;
+    text-align: center;
+}
